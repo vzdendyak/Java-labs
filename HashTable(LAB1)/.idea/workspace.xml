@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d993d4be-a4b1-480e-8f2e-7f59dc836a57" name="Default Changelist" comment="" />
+    <list default="true" id="d993d4be-a4b1-480e-8f2e-7f59dc836a57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../poroh/.idea/poroh.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HashTable(LAB1)/com/HastTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HashTable(LAB1)/com/HastTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HashTable(LAB1)/com/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HashTable(LAB1)/com/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/poroh/META-INF/poroh.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/HastTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HastTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Program.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,13 +23,20 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1YIXWbmCT62lVdjoJojqtgq9DpT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -68,22 +84,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="279" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1582928782222" />
-    <state width="1323" height="198" key="GridCell.Tab.0.bottom" timestamp="1582928983236">
+    <state width="1323" height="198" key="GridCell.Tab.0.bottom" timestamp="1583061462891">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="198" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582928983236" />
-    <state width="1323" height="198" key="GridCell.Tab.0.center" timestamp="1582928983236">
+    <state width="1323" height="198" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583061462891" />
+    <state width="1323" height="198" key="GridCell.Tab.0.center" timestamp="1583061462891">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="198" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582928983236" />
-    <state width="1323" height="198" key="GridCell.Tab.0.left" timestamp="1582928983235">
+    <state width="1323" height="198" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583061462891" />
+    <state width="1323" height="198" key="GridCell.Tab.0.left" timestamp="1583061462891">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="198" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582928983235" />
-    <state width="1323" height="198" key="GridCell.Tab.0.right" timestamp="1582928983236">
+    <state width="1323" height="198" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583061462891" />
+    <state width="1323" height="198" key="GridCell.Tab.0.right" timestamp="1583061462891">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="198" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582928983236" />
+    <state width="1323" height="198" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583061462891" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1582636166130">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

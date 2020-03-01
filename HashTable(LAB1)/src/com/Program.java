@@ -15,5 +15,12 @@ public class Program {
         Item curItem = new Item(520, "MY TEXT");
         table.Insert(curItem);
         table.Search(520);
+        System.out.println(table.Count());
+        table.Remove(520);
+        System.out.println(table.Count());
+        table.Search(520);
+        table.Remove(599);
+
+
     }
 }
