@@ -40,12 +40,22 @@ public class HastTable {
     }
 
     private void InsertInNext(Item item, int index) {
-        String output = String.format("Place %s занято: переходимо до %s", index, index + 1);
-        System.out.println(ANSI_RED + output);
+        int step = this.GetStep(index);
+        boolean state=true;
+        String output = String.format("Place %s занято: переходимо до %s", index, index + step);
         while (items[index] != null) {
-            output = String.format("Place %s занято: переходимо до %s", index, index + 1);
+            output = String.format("Place %s занято: переходимо до %s", index, index + step);
             System.out.println(output);
-            index++;
+            index+=step;
+
+            if (index>items.length && state){
+                if (state){
+                    index=0;
+                    state=false;
+                    continue;
+                }
+                index-=step;
+            }
         }
         if (Count() > maxSize / 2) {
             System.out.println(ANSI_PURPLE + "УВАГА. Перевищено половину memory. Можливi затримки у обрахуваннях!");
@@ -61,8 +71,11 @@ public class HastTable {
         if (value == 0) {
             throw new IllegalArgumentException();
         }
-
         return value % maxSize;
+    }
+
+    public int GetStep(int value) {
+        return 6 - value % 6;
     }
 
     public void ShowCurrentItem(int index) {
@@ -82,8 +95,8 @@ public class HastTable {
 
     public void Remove(int key) {
         int numb = Search(key);
-        if (numb<=maxSize){
-            items[numb]=null;
+        if (numb <= maxSize) {
+            items[numb] = null;
             String output = String.format(ANSI_PURPLE + "Removed element on index: %s" + ANSI_RESET, numb);
             System.out.println(output);
             return;
@@ -94,18 +107,19 @@ public class HastTable {
 
     public int Search(int key) {
         var index = GetHash(key);
-        if (items[index]!=null && items[index].Key == key) {
+        if (items[index] != null && items[index].Key == key) {
             ShowCurrentItem(index);
             return index;
             // return items[index];
         } else {
+            index=0;
             while (index < items.length && (items[index] == null || (items[index].Key != key))) {
                 index++;
             }
             if (index >= items.length) {
                 String output = String.format(ANSI_BLUE + "Sorry. Key: %s not find!" + ANSI_RESET, key);
                 System.out.println(output);
-                return maxSize+100;
+                return maxSize + 100;
             }
 
             ShowCurrentItem(index);
