@@ -4,6 +4,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -20,37 +21,107 @@ public class Main {
         userList[8] = new Model(1000, 65.2, 137, "Oleksiy", "Kucher");
         userList[9] = new Model(9, 15, 168, "Denis", "Khomei");
         Arrays.sort(userList);
-        writeToFile(userList);
+        writeOperation(userList, 1);
         var users = readFromFile();
+        Model[] arrayUserList = new Model[users.size()];
+        users.toArray(arrayUserList);
+
+        writeOperation(arrayUserList, 2);
     }
 
-    public static void writeToFile(Model[] users) {
+    public static void writeOperation(Model[] users, int writeType) {
         try {
-            String header = "| Id | FirstName | LastName | Age | Height |\n";
-            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream("info.txt"), StandardCharsets.UTF_8);
-            writer.write(header);
-            for (int i = 0; i < users.length; i++) {
-                int id = users[i].getId();
-                double age = users[i].getAge();
-                int height = users[i].getHeight();
-                String firstName = users[i].getFirstName();
-                String lastName = users[i].getLastName();
+            int idLenghtMax = 0;
+            int ageLenghtMax = 0;
+            int heightLenghtMax = 0;
+            int nameLenghtMax = 0;
+            int surnameLenghtMax = 0;
+            int lineLenght;
+            String id;
+            String age;
+            String height;
+            String firstName;
+            String lastName;
+            OutputStreamWriter writer;
+            for (Model tempModel : users) {
+                int idLenght = Integer.toString(tempModel.getId()).length();
+                int ageLenght = Double.toString(tempModel.getAge()).length();
+                int heightLenght = Integer.toString(tempModel.getHeight()).length();
+                int firstNameLenght = tempModel.getFirstName().length();
+                int lastNameLenght = tempModel.getLastName().length();
+                if (idLenght > idLenghtMax) idLenghtMax = idLenght;
+                if (ageLenght > ageLenghtMax) ageLenghtMax = ageLenght;
+                if (heightLenght > heightLenghtMax) heightLenghtMax = heightLenght;
+                if (firstNameLenght > nameLenghtMax) nameLenghtMax = firstNameLenght;
+                if (lastNameLenght > surnameLenghtMax) surnameLenghtMax = lastNameLenght;
+            }
+            lineLenght = idLenghtMax + ageLenghtMax + heightLenghtMax + nameLenghtMax + surnameLenghtMax + 7;
+            if (writeType == 1) {
+                writer = new OutputStreamWriter(new FileOutputStream("info.txt"), StandardCharsets.UTF_8);
+            } else {
+                writer = new OutputStreamWriter(new FileOutputStream("info.txt", true), StandardCharsets.UTF_8);
+            }
+            for (int i = -1; i < users.length; i++) {
 
-                String output = String.format("| %d | %s | %s | %.2f | %d |", id, firstName, lastName, age, height);
-                writer.write(output);
-                writer.write("\n");
+                if (i == -1) {
+                    id = "ID";
+                    age = "Age";
+                    height = "Height";
+                    firstName = "Name";
+                    lastName = "Surname";
+                } else {
+                    id = Integer.toString(users[i].getId());
+                    age = Double.toString(users[i].getAge());
+                    height = Integer.toString(users[i].getHeight());
+                    firstName = users[i].getFirstName();
+                    lastName = users[i].getLastName();
+                }
+
+                String strPerson = "|";
+                for (int t = 0; t < idLenghtMax - id.length(); t++)
+                    strPerson += " ";
+                strPerson += id + "|";
+                for (int t = 0; t < nameLenghtMax - firstName.length(); t++)
+                    strPerson += " ";
+                strPerson += firstName + "|";
+                for (int t = 0; t < surnameLenghtMax - lastName.length(); t++)
+                    strPerson += " ";
+                strPerson += lastName + "|";
+                for (int t = 0; t < ageLenghtMax - age.length(); t++)
+                    strPerson += " ";
+                strPerson += age + "|";
+                for (int t = 0; t < heightLenghtMax - height.length() + 1; t++)
+                    strPerson += " ";
+                strPerson += height + "|";
+
+                if (writeType == 1) {
+                    for (int j = 0; j < lineLenght; j++) {
+                        writer.write('-');
+                    }
+                    writer.write('\n');
+                    for (int t = 0; t < lineLenght; t++) {
+                        writer.write(strPerson.charAt(t));
+                    }
+                    writer.write('\n');
+                } else {
+                    for (int j = 0; j < lineLenght; j++) {
+                        System.out.print('-');
+                    }
+                    System.out.print('\n');
+                    for (int t = 0; t < lineLenght; t++) {
+                        System.out.print(strPerson.charAt(t));
+                    }
+                    System.out.println();
+                }
             }
             writer.close();
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static ArrayList<Model> readFromFile() {
-        ArrayList<Model> res = new ArrayList<Model>();
+    public static List<Model> readFromFile() {
+        List<Model> res = new ArrayList<Model>();
         try {
             FileInputStream is = new FileInputStream("info.txt");
             InputStreamReader reader = new InputStreamReader(is, StandardCharsets.UTF_8);
@@ -60,7 +131,7 @@ public class Main {
             char symbol;
             int counter = 0;
             String tempString = "";
-            for (int i=0; i < 45; i++)
+            for (int i = 0; i < 114; i++)
                 reader.read();
 
             while ((symbol = (char) reader.read()) != '\uFFFF') {
@@ -71,32 +142,25 @@ public class Main {
                         switch (tempCounter) {
                             case 0:
                                 tempId = Integer.parseInt(tempString);
-                                System.out.println(tempId);
                                 break;
                             case 1:
                                 tempFirstName = tempString;
-                                System.out.println(tempFirstName);
                                 break;
                             case 2:
                                 tempLastName = tempString;
-                                System.out.println(tempLastName);
                                 break;
                             case 3:
-                               tempString =  tempString.replace(',','.');
+                                tempString = tempString.replace(',', '.');
                                 tempAge = Double.parseDouble(tempString);
-                                System.out.println(tempAge);
                                 break;
                             case 4:
                                 tempHeight = Integer.parseInt(tempString);
-                                System.out.println(tempHeight);
                                 break;
                         }
-                        //counter = 0;
                     } catch (Exception e) {
-                        System.out.println("BAD");
+
                     }
-                    //System.out.println(tempString);
-                    if (!tempString.equals(""))
+                    if (!tempString.equals("") && !tempString.contains("-"))
                         counter++;
                     tempString = "";
                 } else if (symbol == '\n') {
@@ -104,17 +168,16 @@ public class Main {
                         Model tempModel = new Model(tempId, tempAge, tempHeight, tempFirstName, tempLastName);
                         res.add(tempModel);
                     }
+                } else if (symbol == '-') {
+                    for (int i = 0; i < 37; i++) reader.read();
+
                 } else {
                     tempString += symbol;
                 }
-
-
-                //System.out.print(symbol);
             }
-
             reader.close();
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
         return res;
     }
