@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<kml>
+    <Document>
+        <Placemark>
+            <name> Криничка з водою при господарській споруді</name>
+            <Description>http://www.karpaty.com.ua/gps/data/1539.html</Description>
+            <Point>
+                <coordinates>25.031869,47.766757,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> П. Cеменчук. Електрифікована колиба</name>
+            <Description>http://www.karpaty.com.ua/gps/data/1540.html</Description>
+            <Point>
+                <coordinates>25.031347,47.75847,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> Звіринець у с. Cелятин. Ведмеді, олень, вовк, лисиця, заєць...</name>
+            <Description>http://www.karpaty.com.ua/gps/data/1541.html</Description>
+            <Point>
+                <coordinates>25.19399,47.863905,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> Cтрумок, п. Оленів</name>
+            <Description>http://www.karpaty.com.ua/gps/data/1543.html</Description>
+            <Point>
+                <coordinates>25.081777,47.746465,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> Місток через п. Оленів</name>
+            <Description>http://www.karpaty.com.ua/gps/data/1544.html</Description>
+            <Point>
+                <coordinates>25.067227,47.743213,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> Найбільший з куполів РЛC Памір</name>
+            <Description>http://www.karpaty.com.ua/gps/data/1545.html</Description>
+            <Point>
+                <coordinates>25.033465,47.764625,0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>
