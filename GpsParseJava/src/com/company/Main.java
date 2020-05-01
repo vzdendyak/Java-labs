@@ -15,50 +15,58 @@ public class Main {
 
     public static void main(String[] args) {
         try {
+            // Відкриваємо наш файл gpx (вхідний)
             File inputFile = new File("L-35-003-points.gpx");
+            // Команди по створенню файла
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document docGpx = dBuilder.parse(inputFile);
             docGpx.getDocumentElement().normalize();
 
-            // create new document kml
+            // Створюємо новий kml документ (вихідний)
             Document docKml = dBuilder.newDocument();
+            // створюємо основний тег <kml>
             Element rootElement = docKml.createElement("kml");
             docKml.appendChild(rootElement);
-            // create main tag
+            // Створюємо тег <document>
             Element docEl = docKml.createElement("Document");
             rootElement.appendChild(docEl);
-            // get tag 'wpt'
+            // Отримуємо тег wpt з нашого вхідного файлу
             NodeList nList = docGpx.getDocumentElement().getElementsByTagName("wpt");
 
             for (int i = 0; i < nList.getLength(); i++) {
-                // get node
+                // Отримуємо один вузол
                 Node nNode = nList.item(i);
-                // cmt == name
+                // Витягуємо з вхідного елементу тег <cmt>
                 NodeList infoName = docGpx.getElementsByTagName("cmt");
-                // link == description
+                // Витягуємо з вхідного елементу тег <link>
                 NodeList infoDesc = docGpx.getElementsByTagName("link");
+
                 Element element = (Element) nNode;
 
+                // Витягуємо атрибут з елементу тегу  link
                 var links = infoDesc.item(i).getAttributes().item(0).getTextContent();
-                // create elements for KML document
+                // Створюємо нашу структуру KML документа
                 Element placeMark = docKml.createElement("Placemark");
                 Element nameElement = docKml.createElement("name");
                 Element pointElement = docKml.createElement("Point");
                 Element descriptionElement = docKml.createElement("Description");
                 Element coordinatesElement = docKml.createElement("coordinates");
-                // add elements in right order
+
+                // Додаємо створені теги у відповідному порядку
                 docEl.appendChild(placeMark);
+
                 nameElement.appendChild(docKml.createTextNode(infoName.item(i).getTextContent()));
                 placeMark.appendChild(nameElement);
+
                 descriptionElement.appendChild(docKml.createTextNode(links));
                 placeMark.appendChild(descriptionElement);
-                // add a description-link
+
                 coordinatesElement.appendChild(docKml.createTextNode(element.getAttribute("lon")+","+element.getAttribute("lat")+",0"));
                 pointElement.appendChild(coordinatesElement);
                 placeMark.appendChild(pointElement);
 
-                // create a KML file
+                // Перетворюємо у KML
                 TransformerFactory transformerFactory =
                         TransformerFactory.newInstance();
                 Transformer transformer =
