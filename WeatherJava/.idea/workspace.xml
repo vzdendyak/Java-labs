@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a654abee-92a3-47cb-b4af-21a6552c6a1a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../GpsParseJava/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GpsParseJava/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GpsParseJava/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GpsParseJava/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GpsParseJava/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GpsParseJava/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GpsParseJava/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GpsParseJava/GpsParseJava.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cities.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cities.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.json" beforeDir="false" afterPath="$PROJECT_DIR$/server.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather.txt" beforeDir="false" afterPath="$PROJECT_DIR$/weather.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ZahL07bQctgp7lIwR1lNdqmucb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="WeatherJava" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a654abee-92a3-47cb-b4af-21a6552c6a1a" name="Default Changelist" comment="" />
+      <created>1585083052325</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585083052325</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588053012046">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1780" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1585304690699" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588053012046" />
+    <state x="426" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585083261785">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="426" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1585083261785" />
+    <state x="2055" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585304689490">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2055" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1585304689490" />
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1585552525515">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1585552525515" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1585083268012">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1585083268012" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1588053123835">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1585305839393" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588053123835" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1588053123835">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1585305839393" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588053123835" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1588053123835">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1585305839393" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588053123835" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1588053123835">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1585305839393" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588053123835" />
+    <state x="740" y="230" key="RollbackChangesDialog" timestamp="1588053073450">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="230" key="RollbackChangesDialog/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588053073450" />
+    <state x="342" y="140" key="new project wizard" timestamp="1588052749374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="140" key="new project wizard/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588052749374" />
+  </component>
+</project>

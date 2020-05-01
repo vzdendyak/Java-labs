@@ -1,0 +1,14 @@
+Gpx -> Kml
+ * -> document
+ * -> style
+ * -> folder
+ * -> name
+ wpt(main) -> placemark
+ wpt(attr) -> point/coordinates
+ name -> *
+ cmt -> name
+ desc -> *
+ link -> description
+ sym -> (Style)
+ extensions -> *
+
