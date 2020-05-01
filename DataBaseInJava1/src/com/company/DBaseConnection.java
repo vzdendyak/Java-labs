@@ -15,10 +15,7 @@ public class DBaseConnection {
             ex.printStackTrace();
             return null;
         }
-        if (connection != null) {
-            System.out.println("Connected!");
-
-        } else {
+        if (connection == null) {
             System.out.println("Failed");
         }
         return connection;
