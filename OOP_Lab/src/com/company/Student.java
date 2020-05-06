@@ -15,6 +15,10 @@ abstract class Student_StudyGood extends Student {
     void Study() {
         Studying.Good();
     }
+
+    void readyToHelp() {
+        System.out.println("Успішний студент: Готовий допомогти!");
+    }
 }
 
 abstract class Student_StudyBad extends Student {
@@ -22,6 +26,10 @@ abstract class Student_StudyBad extends Student {
     @Override
     void Study() {
         Studying.Bad();
+    }
+
+    void needYourHelp(IHelper helper) {
+        helper.Help();
     }
 }
 
@@ -62,10 +70,6 @@ class Student_StudyGood_RestGood_EatGood extends Student_StudyGood_RestGood {
         Eating.Good();
     }
 
-    void readyToHelp(){
-        System.out.println("Допомагаю!");
-    }
-
 }
 
 class Student_StudyGood_RestGood_EatBad extends Student_StudyGood_RestGood {
@@ -100,9 +104,6 @@ class Student_StudyBad_RestGood_EatGood extends Student_StudyBad_RestGood {
         Eating.Good();
     }
 
-    void needYourHelp(){
-        System.out.println("Прошу про допомогу!");
-    }
 }
 
 class Student_StudyBad_RestGood_EatBad extends Student_StudyBad_RestGood {
