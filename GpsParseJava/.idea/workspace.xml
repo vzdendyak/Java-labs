@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="112063a5-c916-425a-a299-52087b55455a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lab5-XML.docx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/vzdendyak/Java-labs.git" />
+      </set>
+    </option>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\User\IdeaProjects\GpsParseJava\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1b9matcH1nlJQMQjatP8kmF1D4G" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WeatherJava" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="GpsParseJava" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="112063a5-c916-425a-a299-52087b55455a" name="Default Changelist" comment="" />
+      <created>1588052749731</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588052749731</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="426" height="466" key="DebuggerActiveHint" timestamp="1588313033339">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="426" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588313033339" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588317587058">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588317587058" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1588317618671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588317618671" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1588317618671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588317618671" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1588317618671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588317618671" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1588317618671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588317618671" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1588317618671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588317618671" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1588317618671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588317618671" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1588317618671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588317618671" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1588317618671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588317618671" />
+    <state x="342" y="140" key="new project wizard" timestamp="1588317616403">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="140" key="new project wizard/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588317616403" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1588312296370">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588312296370" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((DeferredTextImpl)((DeferredElementImpl)((DeferredTextImpl)((DeferredElementImpl)((DeferredTextImpl)((DeferredElementImpl)((DeferredTextImpl)((DeferredElementImpl)((DeferredTextImpl)((DeferredElementImpl)((DeferredTextImpl)((DeferredElementImpl)((DeferredDocumentImpl)((DeepNodeListImpl)infoDesc).rootNode).firstChild).firstChild).nextSibling).nextSibling).nextSibling).nextSibling).nextSibling).firstChild).nextSibling).nextSibling).nextSibling).nextSibling).previousSibling" custom="com.sun.org.apache.xerces.internal.dom.DeferredTextImpl,com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl,com.sun.org.apache.xerces.internal.dom.DeferredDocumentImpl,com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GpsParseJava$Main.ic" NAME="Main Coverage Results" MODIFIED="1588311658963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

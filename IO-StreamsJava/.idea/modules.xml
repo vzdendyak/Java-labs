@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GpsParseJava.iml" filepath="$PROJECT_DIR$/GpsParseJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IO-StreamsJava.iml" filepath="$PROJECT_DIR$/IO-StreamsJava.iml" />
     </modules>
   </component>
 </project>
