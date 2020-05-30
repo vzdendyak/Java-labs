@@ -4,6 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
         //HtmlFinder.FindLinks();
-        HtmlFinder.FindKontakts();
+        //HtmlFinder.FindContacts();
+        //HtmlFinder.FindDateInComments();
+        //HtmlFinder.FindMonthAndReplace();
+        //HtmlFinder.FindCombinationCatDog();
+        HtmlFinder.FindFirstLastNameValid();
     }
 }

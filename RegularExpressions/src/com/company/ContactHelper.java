@@ -2,8 +2,8 @@ package com.company;
 
 import java.lang.reflect.Parameter;
 
-public class KontaktHelper {
-    KontaktHelper(String firstName,String lastName,String patronymic,String phoneNumber){
+public class ContactHelper {
+    ContactHelper(String firstName, String lastName, String patronymic, String phoneNumber){
         FirstName=firstName;
         LastName=lastName;
         Patronymic=patronymic;
