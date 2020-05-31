@@ -2,7 +2,7 @@
 <kml xmlns="http://earth.google.com/kml/2.1"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Document>
-    <name>GPS device</name>
+    <name>GPS device 77</name>
 <!-- Normal track style -->
     <Style id="track_n">
       <IconStyle>

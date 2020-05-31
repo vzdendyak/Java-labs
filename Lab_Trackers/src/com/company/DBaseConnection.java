@@ -1,6 +1,8 @@
 package com.company;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DBaseConnection {
     // Метод для встановлення зєднання
@@ -103,21 +105,47 @@ public class DBaseConnection {
         }
     }
 
-    public void selectAll() {
+    public TrackerEntity[] selectAll() {
+        Connection connection = this.connect();
+        if (connection != null) {
+            try {
+                ArrayList<TrackerEntity> trackers = new ArrayList<TrackerEntity>();
+                Statement stmt = connection.createStatement();
+                ResultSet res = stmt.executeQuery("select * from trackers");
+                //TrackerEntity[] trackers2 = new TrackerEntity[];
+                while (res.next()) {
+                    TrackerEntity tracker = new TrackerEntity(res.getInt(1),res.getString(2),res.getString(3));
+                    trackers.add(tracker);
+                    //System.out.println(res.getInt(1) + " " + res.getString(2) + " " + res.getString(3));
+                }
+                connection.close();
+                return  trackers.toArray(new TrackerEntity[0]);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+
+    public TrackerEntity selectById(int id) {
         Connection connection = this.connect();
         if (connection != null) {
             try {
                 Statement stmt = connection.createStatement();
-                ResultSet res = stmt.executeQuery("select * from trackers");
+                ResultSet res = stmt.executeQuery("select * from trackers where id ="+id+";");
+                TrackerEntity track=null;
                 while (res.next()) {
-                    System.out.println(res.getInt(1) + " " + res.getString(2) + " " + res.getString(3));
+                     track = new TrackerEntity(res.getInt(1),res.getString(2),res.getString(3));
+                    //System.out.println(res.getInt(1) + " " + res.getString(2) + " " + res.getString(3));
                 }
                 connection.close();
+                return track;
 
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
+        return null;
     }
 
     public void clean() {
@@ -125,7 +153,7 @@ public class DBaseConnection {
         if (connection != null) {
             try {
                 Statement stmt = connection.createStatement();
-                String query = "Delete from `library`.`trackers` ;";
+                String query = "truncate table trackers;";
                 stmt.executeUpdate(query);
                 connection.close();
             } catch (SQLException e) {
