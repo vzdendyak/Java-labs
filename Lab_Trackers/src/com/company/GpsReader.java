@@ -11,15 +11,15 @@ public class GpsReader {
     static GpsModel[] ReadGps(String fileName) {
         try {
 
-            // Відкриваємо наш файл gpx (вхідний)
+            // Відкриваємо наш файл kml (вхідний)
             File inputFile = new File(fileName);
-            // Команди по створенню файла
+
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(inputFile);
             doc.getDocumentElement().normalize();
 
-            // Отримуємо тег wpt з нашого вхідного файлу
+
             NodeList nameList = doc.getDocumentElement().getElementsByTagName("longitude");
             NodeList nodeDescription = doc.getDocumentElement().getElementsByTagName("latitude");
             GpsModel[] models = new GpsModel[nameList.getLength()];
@@ -34,12 +34,4 @@ public class GpsReader {
         }
     }
 
-    static String[] concatCoordinates(String coordinates) {
-        int kr = coordinates.indexOf('.');
-        int kom = coordinates.indexOf(',', kr);
-        String first = coordinates.substring(0, kom);
-        String second = coordinates.substring(kom + 1, coordinates.length());
-        return new String[]{first, second};
-
-    }
 }

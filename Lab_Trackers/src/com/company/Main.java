@@ -1,17 +1,16 @@
 package com.company;
 
-import com.sun.jdi.connect.Connector;
-
-import java.io.Console;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 
 public class Main {
+
     static StringBuilder number;
-    static int ZOOM = 18;
+    static int ZOOM = 20;
 
     public static void main(String[] args) {
+
         boolean write = true;
 
         if (write) {
@@ -77,7 +76,6 @@ public class Main {
 
     public static String[] ParseTiles(String tiles) {
         String[] coords = tiles.split(",");
-        //System.out.println(coords.length);
         return coords;
     }
 
