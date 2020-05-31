@@ -5,6 +5,7 @@ import com.sun.jdi.connect.Connector;
 import java.io.Console;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Scanner;
 
 public class Main {
     static StringBuilder number;
@@ -17,13 +18,13 @@ public class Main {
             DBaseConnection baseConnection = new DBaseConnection();
             baseConnection.clean();
             var models = GpsReader.ReadGps("10.kml");
-            ParseModels(models,10);
+            ParseModels(models, 10);
             models = GpsReader.ReadGps("71.kml");
-            ParseModels(models,71);
+            ParseModels(models, 71);
             models = GpsReader.ReadGps("73.kml");
-            ParseModels(models,73);
+            ParseModels(models, 73);
             models = GpsReader.ReadGps("77.kml");
-            ParseModels(models,77);
+            ParseModels(models, 77);
 
             ParseTrackersToModels();
 
@@ -36,22 +37,28 @@ public class Main {
 
     public static void ParseTrackersToModels() {
         DBaseConnection baseConnection = new DBaseConnection();
+        int trackerSelected = 0;
 
         var trackers = baseConnection.selectAll();
         if (trackers.length == 0)
             return;
 
-        for (TrackerEntity track : trackers) {
-            track.coordinatesArray = ParseTiles(track.coordinates);
-            //System.out.println(track.id + " COUNT " + track.coordinatesArray.length);
-        }
+        System.out.println(ConsoleColors.ANSI_PURPLE + "Database contains " + trackers.length + " trackers" + ConsoleColors.ANSI_RESET);
 
-        var selectedTracker = trackers[0];
+        for (int i = 0; i < trackers.length; i++) {
+            System.out.println(ConsoleColors.ANSI_YELLOW + (i + 1) + ". Track " + trackers[i].name);
+            trackers[i].coordinatesArray = ParseTiles(trackers[i].coordinates);
+        }
+        System.out.println("Select MAIN track: ");
+        Scanner in = new Scanner(System.in);
+        trackerSelected = in.nextInt();
+
+        var selectedTracker = trackers[trackerSelected - 1];
         System.out.println();
         for (TrackerEntity track : trackers) {
             if (selectedTracker.id == track.id)
                 continue;
-            System.out.println(String.format("%s    Compare tracker %s and tracker %s %s", ConsoleColors.ANSI_GREEN, selectedTracker.name, track.name,ConsoleColors.ANSI_RESET));
+            System.out.println(String.format("%s    Compare tracker %s and tracker %s %s", ConsoleColors.ANSI_GREEN, selectedTracker.name, track.name, ConsoleColors.ANSI_RESET));
             CompareTwoTails(selectedTracker.coordinatesArray, track.coordinatesArray);
             System.out.println();
         }
@@ -95,7 +102,7 @@ public class Main {
         }
         TrackerEntity track = new TrackerEntity(id, Integer.toString(id), number.toString());
         baseConnection.addRow(track);
-        System.out.println( ConsoleColors.ANSI_BLUE +  "Track " + id + ConsoleColors.ANSI_RESET +  "\nCoords number: " + models.length);
+        System.out.println(ConsoleColors.ANSI_BLUE + "Track " + id + ConsoleColors.ANSI_RESET + "\nCoords number: " + models.length);
         System.out.println("Unique coords number: " + coordSet.size());
         System.out.println("String length: " + number.length());
         System.out.println();
@@ -110,30 +117,22 @@ public class Main {
             float latDiff = (lat.min + (lat.max - lat.min) / 2);
             if (model.coordinateLong < lonDiff && model.coordinateLat > latDiff) {
                 //0
-                //lon.max = (lon.min + (lon.max - lon.min) / 2); // < lon
-                //lat.min = (lat.min + (lat.max - lat.min) / 2); // > lat
                 lon.max = lonDiff; // < lon
                 lat.min = latDiff; // > lat
                 numberTemp.append('0');
 
             } else if (model.coordinateLong > lonDiff && model.coordinateLat > latDiff) {
                 //1
-                // lat.min = lat.max / 2; // > lat
-                //lon.min = lon.max / 2; // > lon
                 lat.min = latDiff; // > lat
                 lon.min = lonDiff; // > lon
                 numberTemp.append('1');
             } else if (model.coordinateLong < lonDiff && model.coordinateLat < latDiff) {
                 //2
-                //lon.max = (lon.min + (lon.max - lon.min) / 2); // < lon
-                //lat.max = (lat.min + (lat.max - lat.min) / 2); // < lat
                 lon.max = lonDiff; // < lon
                 lat.max = latDiff; // < lat
                 numberTemp.append('2');
             } else if (model.coordinateLong > lonDiff && model.coordinateLat < latDiff) {
                 //3
-                //lon.min = lon.max / 2; // > lon
-                //lat.max = (lat.min + (lat.max - lat.min) / 2); // < lat
                 lon.min = lonDiff; // > lon
                 lat.max = latDiff; // < lat
                 numberTemp.append('3');
