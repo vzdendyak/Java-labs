@@ -42,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.18.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RegularExpressions" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -82,10 +82,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1588334736710">
+    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1591004068494">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1588334736710" />
+    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1366.137.1366.728@0.0.1920.1040" timestamp="1591004068494" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1588346070096">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

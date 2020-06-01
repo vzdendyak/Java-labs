@@ -36,8 +36,9 @@ public class HtmlFinder {
     }
     // task 2
     static public void FindContacts() {
-        var htmlTextPhones = readContactsFromHtml("phones.html");
-        Pattern pattern = Pattern.compile("<td .* style=\"width: 32.0388%\">.*\\n([А-ЯІЄЮЙ]*).*\\n*([А-ЯІЄЮЙ]*.*) ([А-ЯІЄЮЙ].*)<.*\\n.*<td.*26\\.2136.*>(\\+\\d{2}\\(\\d{4}\\)\\d{2}-\\d{2}-\\d{2})", Pattern.CASE_INSENSITIVE);//поиск совпадений с шаблоном будет производиться без учета регистра символов.
+        var htmlTextPhones = readContactsFromHtml("dovidnuk.html");
+        //Pattern pattern = Pattern.compile("<td .* style=\"width: 32.0388%\">.*\\n([А-ЯІЄЮЙ]*).*\\n*([А-ЯІЄЮЙ]*.*) ([А-ЯІЄЮЙ].*)<.*\\n.*<td.*26\\.2136.*>(\\+\\d{2}\\(\\d{4}\\)\\d{2}-\\d{2}-\\d{2})", Pattern.CASE_INSENSITIVE);//поиск совпадений с шаблоном будет производиться без учета регистра символов.
+        Pattern pattern = Pattern.compile("<td .* style=\"width: \\d{2}.\\d{4}%\">.*\\n([А-ЯІЄЮЙ]*).*\\n*([А-ЯІЄЮЙ]*.*) ([А-ЯІЄЮЙ].*)<.*\\n.*<td.*\\d{2}\\.\\d{4}.*>(\\+\\d{2}\\(\\d{4}\\)\\d{2}-\\d{2}-\\d{2})");//поиск совпадений с шаблоном будет производиться без учета регистра символов.
         Matcher matcher = pattern.matcher(htmlTextPhones);
         ArrayList<ContactHelper> contacts = new ArrayList<ContactHelper>();
         while (matcher.find()) {
