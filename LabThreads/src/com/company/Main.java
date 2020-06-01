@@ -16,9 +16,9 @@ public class Main {
 				new Thread(new Vehicle(5, "black", 1,3)),
 		};
 
-		for (Thread th : ths) {
-			Thread.sleep(30);
-			th.start();
+		for (int i = 0; i < ths.length; i++) {
+			ths[i].start();
+			Thread.sleep( Math.abs((i+1)*new Random().nextInt())%70 + 5);
 		}
     }
 }
