@@ -9,7 +9,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class HtmlFinder {
+public class RegularExpFinder {
 
     // task 1
     static public void FindLinks() {
